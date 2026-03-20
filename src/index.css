@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core palette - Tech blue */
+    --background: 220 20% 97%;
+    --foreground: 220 30% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 10%;
+
+    /* Primary: Vivid tech blue */
+    --primary: 217 91% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Soft blue-gray */
+    --secondary: 215 25% 94%;
+    --secondary-foreground: 220 30% 18%;
+
+    --muted: 215 20% 93%;
+    --muted-foreground: 215 15% 50%;
+
+    /* Accent: Lighter blue */
+    --accent: 213 94% 95%;
+    --accent-foreground: 217 91% 40%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 25% 90%;
+    --input: 215 25% 88%;
+    --ring: 217 91% 50%;
+
+    --radius: 0.625rem;
+
+    /* Extended tokens */
+    --hero-overlay: 220 40% 8% / 0.6;
+    --nav-bg: 0 0% 100% / 0.85;
+    --section-alt: 215 30% 96%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 50%), hsl(200 90% 55%));
+    --gradient-hero: linear-gradient(160deg, hsl(220 40% 12%), hsl(217 60% 22%), hsl(200 50% 18%));
+    --gradient-subtle: linear-gradient(180deg, hsl(215 30% 96%), hsl(0 0% 100%));
+
+    /* Shadows */
+    --shadow-elegant: 0 4px 24px -4px hsl(217 91% 50% / 0.12);
+    --shadow-glow: 0 0 32px hsl(217 91% 50% / 0.15);
+    --shadow-card-hover: 0 12px 32px -8px hsl(217 91% 50% / 0.18);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .container-wide {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+}
