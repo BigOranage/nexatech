@@ -15,9 +15,11 @@ function ScrollToTop() {
   return null
 }
 
+const basename = import.meta.env.BASE_URL.replace(/\/$/, "")
+
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <ScrollToTop />
       <div className="min-h-screen flex flex-col bg-background text-foreground">
         <Navbar />

@@ -8,6 +8,16 @@
     <meta name="description" content="NexaTech 提供领先的企业级智能科技解决方案，助力企业数字化转型升级。" />
   </head>
   <body>
+    <!-- GitHub Pages SPA routing restore -->
+    <script>
+      (function(){
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
