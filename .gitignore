@@ -1,5 +1,8 @@
 node_modules
 dist
 dist-ssr
+.vite
 *.local
+*.tsbuildinfo
+vibe_images
 .DS_Store
